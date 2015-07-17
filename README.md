@@ -1,6 +1,6 @@
 # MovieRecommender
 
-As part of the course Collaborative Filtering (by Dr. Angshul Majumdar, IIIT-Delhi) during my undergraduate studies, I implemented a series of evolving movie recommender systems using the MovieLens database. 
+As part of the course Collaborative Filtering (by Dr. Angshul Majumdar, IIIT-Delhi) during my undergraduate studies, I implemented a series of evolving movie recommender systems using the MovieLens database (https://grouplens.org/datasets/movielens/). 
 
 The main objective was to see improvements introduced by increasingly sophiticated techniques such as user and item bias correction, neighbourhood selection, variance weighting, correlation thresholding and rating normalization. 
 
