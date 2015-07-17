@@ -1,3 +1,7 @@
+"""
+K Nearest Neighbors with Pearson, Cosine and Manhattan distance.
+"""
+
 #!/usr/bin/python
 from math import sqrt
 from math import cos
