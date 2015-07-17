@@ -1,0 +1,53 @@
+Code Reference: KNNWithPearsonCosimeManhattan.py
+
+For my own recommender system, k-nearest neighbor approach has been used. 
+Moreover, the recommender system has been tested for 5 values of k = 1, 2, 3, 4, 5.
+
+Also, to measure the similarity between two users, three different similarity measures have been used: 
+Manhattan distance, Spearman’s Correlation and Cosine similarity.
+
+For each distance measure, the ratings have been predicted for all k = 1 to 5. For k>1, the rating of 
+my recommender system has been computed using weighted average of the ratings of the k most-similar users.
+
+Next, the Mean Absolute Error (MAE) has been calculated by computing the average of the differences in the 
+predicted ratings from the train dataset and the actual ratings in the test dataset.
+
+Furthermore, the final MAE value (for each distance measure and k) has been averaged over the 
+corresponding MAE values calculated for each fold.
+
+The MAE results for each distance measure are as follows:
+
+1. Manhattan Distance:
+
+k=1: 1.12160566706
+k=2: 3.346675
+k=3: 3.27333333333
+k=4: 3.20264583333
+k=5: 3.13912666667
+
+2. Spearman’s Correlation:
+
+k=1: 1.02225633154
+k=2: 3.22188809325
+k=3: 3.12657687129
+k=4: 3.02189644693
+k=5: 2.94907898302
+
+3. Cosine Similarity:
+
+k=1: 1.37537239325
+k=2: 3.30591070511
+k=3: 3.19181471856
+k=4: 3.07915950349
+k=5: 2.97838310348
+
+We can see that as we increased the number of users from 1 to 2, there was a huge increase in the 
+Mean Absolute Error. As we consider even more neighbors, the MAE slightly improves. This can be 
+attributed to the fact that we are relying on more similar users for predicting ratings. This way, the 
+ratings are more robust to user bias.
+
+Furthermore, at k=5, Manhattan gives the maximum MAE while Spearman’s Correlation and Cosine 
+similarity give more or less the same MAE. This verifies the fact that Manhattan is less accurate than 
+the other two distance measures. Also, such behavior is observed because the given dataset is 
+sparse and Cosine Similarity and Spearman’s Correlation distance measures handle sparseness 
+better than Manhattan distance.
